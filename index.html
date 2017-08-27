@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Toothpick</title>
 	<style type="text/css">
-		.center {
-		    display: flex;
-		    justify-content: center;
-		    /* align horizontal */
-		    align-items: center;
-    height: 100%;
-		}
-html, 
-body {
-    height: 100%;
-}
+	html,
+	body {
+		height: 100%;
+		font-family: sans-serif;
+	}
+	.center {
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  	height: 100%;
+	}
+	.button-container {
+		margin-top: 20px;
+		font-size: 0;
+	}
+	a {
+		margin: 0 8px;
+		display: inline-block;
+		height: 48px; width: 180px;
+		border: 3px solid #FF5F6D;
+		border-radius: 4px;
+		line-height: 46px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		background: white;
+		color: #FF5F6D;
+
+		transition: 0.16s ease-in-out;
+	}
+	a:hover {
+		color: white;
+		background: #FF5F6D;
+	}
 	</style>
 </head>
 <body>
 <div class="center">
-	<img src="logo.png"	 />
+	<img src="logo.png"	/>
+	<div class="button-container">
+		<a href="https://github.com/trytoothpick">Code</a>
+		<a href="https://www.figma.com/file/OcExzAT5SUgmI5q0JfPDd3ky/Toothpick">Designs</a>
+	</div>
 </div>
 
 </body>
