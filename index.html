@@ -7,6 +7,7 @@
 	body {
 		height: 100%;
 		font-family: sans-serif;
+    margin: 0;
 	}
 	.center {
     display: flex;
@@ -19,7 +20,7 @@
 		margin-top: 20px;
 		font-size: 0;
 	}
-	a {
+	a.btn {
 		margin: 0 8px;
 		display: inline-block;
 		height: 48px; width: 180px;
@@ -36,22 +37,46 @@
 
 		transition: 0.16s ease-in-out;
 	}
-	a:hover {
+	a.btn:hover {
 		color: white;
 		background: #FF5F6D;
 	}
+  .wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  	height: 100%;
+  }
+  .footer,
+  .push {
+    height: 50px;
+  }
+  .footer {
+    text-align: center;
+  }
 	</style>
 </head>
 <body>
-<div class="center">
-	<img src="logo.png"	/>
-	<div class="button-container">
-		<a href="https://docs.google.com/presentation/d/1NccNoFzWVJsIuMEVD2LQfXYJDRgY0OxlNyv2yluxI5A/edit?usp=sharing">Slides</a>
-		<a href="https://github.com/trytoothpick">Code</a>
-		<a href="https://www.figma.com/file/OcExzAT5SUgmI5q0JfPDd3ky/Toothpick">Designs</a>
-	</div>
-</div>
-
+  <div class="wrapper">
+    <div class="center">
+      <img src="logo.png"	/>
+      <div class="button-container">
+        <a class="btn" href="https://docs.google.com/presentation/d/1NccNoFzWVJsIuMEVD2LQfXYJDRgY0OxlNyv2yluxI5A/edit?usp=sharing">Slides</a>
+        <a class="btn" href="https://github.com/trytoothpick">Code</a>
+        <a class="btn" href="https://www.figma.com/file/OcExzAT5SUgmI5q0JfPDd3ky/Toothpick">Designs</a>
+      </div>
+    </div>
+    <div class="push"></div>
+  </div>
+  <footer class="footer">
+    <a href="http://blackbirdstudios.io"><img src="bblogo.png" height="50px" /></a>
+  </footer>
 </body>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
